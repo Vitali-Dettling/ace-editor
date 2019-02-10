@@ -5,11 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "node",
+            "request": "launch",
+            "name": "express",
+            "program": "${workspaceFolder}\\bin\\www"
+        },{
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "name": "Ace",
+            "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Express with Ace",
+            "configurations": ["express", "Ace"]
         }
     ]
 }
